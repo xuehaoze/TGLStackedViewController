@@ -147,6 +147,10 @@
     
     CGSize contentSize = CGSizeMake(CGRectGetWidth(self.collectionView.bounds), self.layoutMargin.top + self.topReveal * [self.collectionView numberOfItemsInSection:0] + self.layoutMargin.bottom);
     
+    if (self.itemSize.height > self.topReveal) {
+        contentSize.height += self.itemSize.height - self.topReveal;
+    }
+    
     if (contentSize.height < CGRectGetHeight(self.collectionView.bounds)) {
 
         contentSize.height = CGRectGetHeight(self.collectionView.bounds);
