@@ -66,4 +66,8 @@
 /** Content offset value to replace actual value when -overwriteContentOffset is `YES` */
 @property (nonatomic, assign) CGPoint contentOffset;
 
+
+/** array of deleting index paths, initial before deleting, and clear after all done */
+//@property (nonatomic, strong) NSMutableArray *deletingIndexPaths;
+
 @end

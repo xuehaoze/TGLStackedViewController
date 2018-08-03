@@ -350,4 +350,46 @@
     return self.layoutAttributes[indexPath];
 }
 
+
+
+// For insertion/removing animations
+//- (void)prepareForCollectionViewUpdates:(NSArray<UICollectionViewUpdateItem *> *)updateItems {
+//    [super prepareForCollectionViewUpdates:updateItems];
+//
+//    [_deletingIndexPaths removeAllObjects];
+//
+//    for (int i = 0; i < [updateItems count]; i++)
+//    {
+//        UICollectionViewUpdateItem *updateItem = updateItems[i];
+//        if (updateItem.updateAction == UICollectionUpdateActionDelete && updateItem.indexPathBeforeUpdate != NULL) {
+//            [_deletingIndexPaths addObject:updateItem.indexPathBeforeUpdate];
+//        }
+//    }
+//}
+//
+//- (void)finalizeCollectionViewUpdate {
+//    [super finalizeCollectionViewUpdates];
+//
+//    [_deletingIndexPaths removeAllObjects];
+//}
+//
+//
+//- (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath {   // For insertion
+//    UICollectionViewLayoutAttributes *attribute = [super initialLayoutAttributesForAppearingItemAtIndexPath:itemIndexPath];
+//    if ([_deletingIndexPaths containsObject:itemIndexPath]) {
+//        attribute.transform = CGAffineTransformMakeTranslation(500, 0);
+//    }
+//
+//    return attribute;
+//}
+//
+//- (UICollectionViewLayoutAttributes *)finalLayoutAttributesForDisappearingItemAtIndexPath:(NSIndexPath *)itemIndexPath {    // For deletion
+//    UICollectionViewLayoutAttributes *attribute = [super initialLayoutAttributesForAppearingItemAtIndexPath:itemIndexPath];
+//    if ([_deletingIndexPaths containsObject:itemIndexPath]) {
+//        attribute.transform = CGAffineTransformMakeTranslation(500, 0);
+//    }
+//
+//    return attribute;
+//}
+
 @end
