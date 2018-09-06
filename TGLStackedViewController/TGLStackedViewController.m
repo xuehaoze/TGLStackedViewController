@@ -329,6 +329,9 @@
             layoutcompletion(YES);
         }
     }
+    else {
+        if (completion) completion();
+    }
 }
 
 - (void)resetExposedItemIndexPath {
